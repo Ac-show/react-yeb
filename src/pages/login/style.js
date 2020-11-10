@@ -10,6 +10,7 @@ const LoginPage = styled.div`
   border: 1px solid #eaeaea;
   box-shadow: 0 0 25px #cac6c6;
   text-align: center;
+  box-sizing: border-box;
 
   h3 {
     margin-bottom: 40px;
@@ -33,6 +34,7 @@ const LoginPage = styled.div`
     color: #606266;
     margin-bottom: 20px;
     outline: none;
+    font-size: 12px;
   }
 
   .identify-code {
@@ -53,6 +55,7 @@ const LoginPage = styled.div`
       line-height: 32px;
       padding: 0 15px;
       outline: none;
+      font-size: 12px
     }
   }
 

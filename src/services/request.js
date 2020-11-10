@@ -6,8 +6,11 @@ export function request(config) {
       timeout: 5000
     })
 
-    instance.interceptors.request.use(data => {
-      return data
+    instance.interceptors.request.use(config => {
+      if (window.sessionStorage.getItem('token')) {
+        config.headers.Authorization = window.sessionStorage.getItem('token')
+      }
+      return config
     }, err => {
     })
 

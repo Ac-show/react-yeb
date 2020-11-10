@@ -2,7 +2,8 @@ import { combineReducers } from 'redux'
 
 import {
   INIT_TOKEN,
-  // INIT_VERTICAL_MENU
+  SAVE_STAFF_DATA,
+  GET_STAFF_DATA
 } from './constans'
 
 // 保存token
@@ -18,23 +19,45 @@ const initDateReducer = (state = initDateState, action) => {
   }
 }
 
-// 保存垂直菜单栏的refs
-// const initVerticalMenus = {
-//   refs: []
-// }
-// const initVerticalMenusReducer = (state = initVerticalMenus, action) => {
-//   switch(action.type) {
-//     case INIT_VERTICAL_MENU:
-//       return {...state, refs: [...state.refs].push(action.ref)}
-//     default: 
-//       return state
-//   }
-// }
+const initStaffData = {
+  staffData: []
+}
+const staffDataReducer = (state = initStaffData, action) => {
+  switch(action.type) {
+    case SAVE_STAFF_DATA:
+      return {...state, staffData: action.data}
+    case GET_STAFF_DATA:
+      getStaffData(action.currentPage, action.size)
+      return state
+    default:
+      return state
+  }
+}
+
+function getStaffData(currentPage, size) {
+  console.log(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const reducer = combineReducers({
   initDateReducer,
-  // initVerticalMenusReducer
+  staffDataReducer
 })
 
 export default reducer

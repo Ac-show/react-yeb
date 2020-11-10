@@ -18,6 +18,7 @@ const ACLogin = memo(function(props) {
       if (res.code === 200) {
         props.initToken(res.obj.token)
         props.history.push('/home')
+        window.sessionStorage.setItem('token', res.obj.tokenHead + res.obj.token)
       }
     })
   }

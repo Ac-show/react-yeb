@@ -32,92 +32,92 @@ import ACSysStaff from '../pages/home/c_page/system/sysStaff'
 
 const homeChildPage = [
   {
-    path: '/home/baseinfo',
+    path: '/home/emp/basic',
     exact: true,
     component: ACBaseInfo
   },
   {
-    path: '/home/salary',
+    path: '/home/sal/sob',
     exact: true,
     component: ACSalaryCheck
   },
   {
-    path: '/home/salary/last',
+    path: '/home/sal/month',
     component: ACSalaryLast
   },
   {
-    path: '/home/salary/serach',
+    path: '/home/sal/search',
     component: ACSalarySearch
   },
   {
-    path: '/home/salary/staff',
+    path: '/home/sal/sobcfg',
     component: ACSalaryStaff
   },
   {
-    path: '/home/salary/salarttable',
+    path: '/home/sal/table',
     component: ACSalaryTable
   },
   {
-    path: '/home/staff',
+    path: '/home/per/emp',
     exact: true,
     component: ACStaffInfo
   },
   {
-    path: '/home/staff/move',
+    path: '/home/per/mv',
     component: ACStaffMove
   },
   {
-    path: '/home/staff/rap',
+    path: '/home/per/ec',
     component: ACStaffRAP
   },
   {
-    path: '/home/staff/salary',
+    path: '/home/per/salary',
     component: ACStaffSalary
   },
   {
-    path: '/home/staff/train',
+    path: '/home/per/train',
     component: ACStaffTrain
   },
   {
-    path: '/home/statistics/hrinfo',
+    path: '/home/sta/pers',
     component: ACStaHrInfo
   },
   {
-    path: '/home/statistics/hrrecord',
+    path: '/home/sta/record',
     component: ACStaHrRecord
   },
   {
-    path: '/home/statistics/staff',
+    path: '/home/sta/score',
     component: ACStaStaff
   },
   {
-    path: '/home/statistics',
+    path: '/home/sta/all',
     exact: true,
     component: ACStaSum
   },
   {
-    path: '/home/system',
+    path: '/home/sys/basic',
     exact: true,
     component: ACSysInfo
   },
   {
-    path: '/home/system/init',
+    path: '/home/sys/init',
     component: ACSysInit
   },
   {
-    path: '/home/system/logo',
+    path: '/home/sys/log',
     component: ACSysLogo
   },
   {
-    path: '/home/system/recover',
+    path: '/home/sys/data',
     component: ACSysRecover
   },
   {
-    path: '/home/system/set',
+    path: '/home/sys/cfg',
     component: ACSysSet
   },
   {
-    path: '/home/system/staff',
+    path: '/home/sys/admin',
     component: ACSysStaff
   }
 ]

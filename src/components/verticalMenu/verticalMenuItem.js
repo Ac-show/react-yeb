@@ -1,13 +1,11 @@
-import React, { memo, useEffect, useRef } from 'react'
+import React, { memo, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 export default memo(function VerticalMenuItem(props) {
   const menu = useRef(null)
   const icon = useRef(null)
-  useEffect(() => {
-    props.collect({menu, icon})
-  }, [])
+  props.collect({menu, icon})
   return (
     <ItemStyle onClick={e => props.onClick(e, menu, icon)}>
       <div className="title hover-ele"><i></i>{props.menu.title}<span><b ref={icon}></b></span></div>

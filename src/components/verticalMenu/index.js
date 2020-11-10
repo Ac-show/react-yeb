@@ -1,9 +1,9 @@
-import React, { memo, useState } from 'react'
+import React, { memo } from 'react'
 
 import VerticalMenuItem from './verticalMenuItem'
 
 export default memo(function ACVerticalMenu(props) {
-  const [refs, setRefs] = useState([])
+  let refs = []
   const clickMenu = (e, menu, icon) => {
     let height = 0
     for (let i = 0; i< menu.current.children.length; i++) {
@@ -23,11 +23,7 @@ export default memo(function ACVerticalMenu(props) {
   }
   // 搜集verticalMenu的ref
   const collect = (ref) => {
-    setRefs((preRefs) => {
-      let shortRefs = [...preRefs]
-      shortRefs.push(ref)
-      return shortRefs
-    })
+    refs.push(ref)
   }
   return (
     <div style={{display: "inline-block"}}>
